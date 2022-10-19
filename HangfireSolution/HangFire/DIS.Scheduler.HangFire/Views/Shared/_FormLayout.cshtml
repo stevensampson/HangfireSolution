@@ -1,0 +1,18 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    @RenderSection("styles", required: false)
+}
+
+
+@section scripts
+{
+    @Scripts.Render("~/scripts/jqueryval")
+    @RenderSection("scripts", required: false)
+}
+
+
+@RenderBody()

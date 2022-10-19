@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <ComponentGroup Id="MarkUpEnvironment" Directory='ConfigFolder'>
+      <!-- Swap in an appropriate config file based on the deployment environment -->
+      <Component>
+        <Condition>ENVIRONMENT="DEV"</Condition>
+        <File Source='!(wix.publishDir)\Web.config.Development'>
+          <CopyFile Id='CopyDev1Config' DestinationDirectory='INSTALLFOLDER' DestinationName='web.config' />
+          <!--<RemoveFile Id="RemoveDevConfig" Directory="INSTALLFOLDER" Name="Web.config.Development" On="install"  />-->
+
+        </File>
+        <!--<File Source='$(var.publishDir)'>
+          <RemoveFile Id="RemoveDevConfig" Directory="INSTALLFOLDER" Name="Web.config.Development" On="install"  />          
+        </File>-->       
+      </Component>
+      <Component>
+        <Condition>ENVIRONMENT="UAT"</Condition>
+        <File Source='!(wix.publishDir)\Web.config.Staging'>
+          <CopyFile Id='CopyUATConfig' DestinationDirectory='INSTALLFOLDER' DestinationName='web.config' />
+        </File>
+        <!--<RemoveFile Id="RemoveStagingConfig" Directory="INSTALLFOLDER" Name="Web.config.Development"  On="install"  />-->
+        <!--<File Source='$(var.publishDir)'>
+          <RemoveFile Id="RemoveStagingConfig" Directory="INSTALLFOLDER" Name="Web.config.Development"  On="install"  />
+        </File>-->
+      </Component>
+      <Component>
+        <Condition>ENVIRONMENT="PROD"</Condition>
+        <File Source='!(wix.publishDir)\Web.config.Production'>
+          <CopyFile Id='CopyPRODConfig' DestinationDirectory='INSTALLFOLDER' DestinationName='web.config' />
+          <!--<RemoveFile Id="RemoveProdConfig" Directory="INSTALLFOLDER" Name="Web.config.Development"   On="install" />-->
+        </File>
+        <!--<File Source='$(var.publishDir)'>
+          <RemoveFile Id="RemoveProdConfig" Directory="INSTALLFOLDER" Name="Web.config.Development"   On="install" />
+        </File>-->
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>

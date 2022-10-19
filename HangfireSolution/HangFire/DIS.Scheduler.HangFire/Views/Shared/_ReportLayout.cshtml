@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section styles
+{
+    @RenderSection("styles", required: false)
+}
+
+@section scripts
+{
+    @Scripts.Render("~/scripts/bbq")
+
+    <script type="text/javascript">
+
+        function doPaging(me) {
+            try {
+                var linkQuery = jQuery.deparam.querystring($(me).attr("href"))
+                var newUrl = jQuery.param.querystring(window.location.href, "page=" + linkQuery.page);
+                window.location.href = newUrl;
+            }
+            catch (e) {
+                alert("Error in pagination : " + e);
+            }
+            return false;
+        }
+
+    </script>
+    @RenderSection("scripts", required: false)
+}
+
+@RenderBody()

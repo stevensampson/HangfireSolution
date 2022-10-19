@@ -1,0 +1,277 @@
+﻿@functions
+{
+
+}
+
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <title>@ViewBag.Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=" viewport" content="width=device-width">
+    <link rel="icon" href="favicon.ico" />
+    <style type="text/css">
+        body {
+        }
+    </style>
+
+    @Styles.Render("~/css/site")
+    @Styles.Render("~/css/jqueryui")
+    @RenderSection("styles", required: false)
+
+    @Scripts.Render("~/scripts/jquery")
+    @Scripts.Render("~/scripts/jqueryui")
+    @Scripts.Render("~/scripts/modernizr")
+    @Scripts.Render("~/scripts/site")
+    @RenderSection("scripts", required: false)
+    <script type="text/javascript">
+        function resetMe(obj) {
+            var box = $(obj);
+            
+            var parent = box.closest(".modal-content");
+            parent.css("width", "");//Remove exrta styles that can inturrupt responsiveness of the design
+            parent.find(".modal-body:first").css("width", "");
+            parent.find(".modal-body:first").css("height", "");
+            box.closest(".modal-dialog").css("width", ""); //Remove exrta styles that can inturrupt responsiveness of the design           
+        }
+
+        $(document).ready(function () {
+
+            $(".modal-body").each(function (index, obj) {
+                $(obj).resizable({                    
+                    minHeight:70,
+                    minWidth: 600,
+                    resize: function (event, ui) {
+                        var s = ui.size;
+                        var box = ui.helper;
+
+                        if (s.width > 600) { // bootstrap default size for version 3.*
+                            box.closest(".modal-content").width(s.width); //Add styles to outer div(s) in order to adjust with actual resizable div
+                            box.closest(".modal-dialog").width(s.width); //Add styles to outer div(s) in order to adjust with actual resizable div
+                        }
+                        else {
+                            box.closest(".modal-content").css("width", ""); //Remove exrta styles that can inturrupt responsiveness of the design
+                            box.closest(".modal-dialog").css("width", ""); //Remove exrta styles that can inturrupt responsiveness of the design
+                            box.css("width", ""); //Remove exrta styles that can inturrupt responsiveness of the design
+                        }
+                        if (s.height <= 70) {
+                            box.css("height", ""); //Remove exrta styles that can inturrupt responsiveness of the design
+                        }
+                    },
+                    stop: function (event, ui) {
+                        //DO CLEANUPS                      
+                    }
+                });
+            });   
+       });
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <div class="logo_placer">
+                    <img src="~/Images/cdi_header_l.png" width="126" height="56" />
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="~/Home/Index">Home</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Finance <b class="caret"></b> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/v1/Finance/Client/Help">Client</a>
+                            </li>
+                            <li>
+                                <a href="/v1/Finance/Employee/Help">Employee</a>
+                            </li>
+                            <li>
+                                <a href="/v1/Finance/SecondaryAssignment/Help">Secondary Assignment</a>
+                            </li>
+                            <li>
+                                <a href="/v1/Finance/SupplierAssociate/Help">Supplier Associate</a>
+                            </li>
+                            <li>
+                                <a href="/v1/Finance/Transactions/Help">Transactions</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">HR <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/v1/HR/Employee/Help">Employee</a>
+                            </li>
+                            <li>
+                                <a href="/v1/HR/Monitor/Help">Monitor</a>
+                            </li>
+                            <li>
+                                <a href="/v1/HR/Transactions/Help">Transactions</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Staffing <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="https://disdmz-dev.cdicorp.com/v1/Staffing/Candidate/Help">Candidate</a>
+                            </li>
+                            <li>
+                                <a href="https://disdmz-dev.cdicorp.com/v1/Staffing/Client/Help">Client</a>
+                            </li>
+                            <li>
+                                <a href="https://disdmz-dev.cdicorp.com/v1/Staffing/Employee/Help">Employee</a>
+                            </li>
+
+                            <li>
+                                <a href="https://disdmz-dev.cdicorp.com/v1/Staffing/SecondaryAssignment/Help">Secondary Assignment</a>
+                            </li>
+                            <li>
+                                <a href="https://disdmz-dev.cdicorp.com/v1/Staffing/SuppliersAssociate/Help">Supplier Associate</a>
+                            </li>
+                            <li>
+                                <a href="https://disdmz-dev.cdicorp.com/v1/Staffing/Transactions/Help">Transactions</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">UK <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="http://disint2.cdicorp.com/v1/UKFinance/Tempest.svc">UK Finance</a>
+                            </li>
+                            <li>
+                                <a href="https://disdmz2.cdicorp.com/v1/UKStaffing/UkStaffingService.wsdl">UK Staffing</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                    <li>
+                        <a href="~/Logs/Index">Logs</a>
+                    </li>
+                    <li>
+                        <a href="~/Transactions/Index">Transactions</a>
+                    </li>
+                           
+                    <li>
+                                <a href="~/Diagnostics/ApiMonitor">API Monitor</a>
+                            </li>
+                        </ul>
+                    </li>
+                    @*<li>
+                        <a href="~/Logs/Index">Logs</a>
+                    </li>
+                    <li>
+                        <a href="~/Transactions/Index">Transactions</a>
+                    </li>*@
+                    <li>
+                        <a href="/v1/HR/Monitor/quartz/index.ashxz">Quartz Scheduler</a>
+                    </li>
+
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="~/BusinessArea/Index">Business Area</a>
+                            </li>
+                            <li>
+                                <a href="~/BusinessAreaApplication/Index">Business Application</a>
+                            </li>
+                            <li>
+                                <a href="~/ApplicationResource/Index">Business Application Resource</a>
+                            </li>
+                            <li>
+                                <a href="~/ApplicationResourceAPI/Index">Business Application Resource API</a>
+                            </li>
+                            <li>
+                                <a href="~/Subscriber/Index">Subscriber</a>
+                            </li>
+                            <li>
+                                <a href="~/ApplicationResourceAPISubscriber/Index">Business Application Resource API Subscriber</a>
+                            </li>
+                            <li>
+                                <a href="~/ApplicationConfig/Index">Business Area Application Configration</a>
+                            </li>
+                            
+                            <li class="divider">
+                                
+                            </li>  
+                            <li role="presentation" class="dropdown-header">Event settings</li>                         
+                            <li>
+                                <a href="~/EventCode/Index">EventCode</a>
+                            </li>
+                            <li>
+                                <a href="~/EventLevel/Index">EventLevel</a>
+                            </li>
+                            <li>
+                                <a href="~/EventWorkFlow/Index">Event WorkFlow</a>
+                            </li>
+                            <li>
+                                <a href="~/NotificationWorkFlow/Index">Notification WorkFlow</a>
+                            </li>
+                            <li>
+                                <a href="~/EventLevelsByApplicationMap/Index">Event Level By Application</a>
+                            </li>
+                            <li>
+                                <a href="~/NotificationLevelByApplicationMap/Index">Notification Level By Application</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                @*<form class="navbar-form navbar-right">*@
+                <!--<div class="form-group">
+                  <input type="text" placeholder="Username" class="form-control input-sm">
+                </div>
+                <div class="form-group">
+                  <input type="password" placeholder="Password" class="form-control input-sm">
+                </div>
+                <button type="submit" class="btn btn-success btn-sm">Sign in</button>-->
+                @*</form>*@
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+
+
+    <div class="container-fluid">
+        ::before
+        <!-- container -->
+        <div class="row">
+            ::before
+            <div class="col-md-12">
+                <br />
+                <h2><small>Data Integration Services</small>&nbsp;@ViewBag.Heading</h2>
+                @PageUtils.AlertControl()
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @RenderBody()
+            </div>
+        </div>
+        <hr>
+        <footer class="text-center">
+            <p class="text-muted"> &copy; CDI Corporation</p>
+        </footer>
+        <!-- /container -->
+    </div>
+</body>
+
+</html>

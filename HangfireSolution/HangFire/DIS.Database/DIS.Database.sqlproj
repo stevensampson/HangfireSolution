@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>DIS.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{88b13d6f-12fa-4a20-a10b-f588c27e017d}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>DIS.Database</RootNamespace>
+    <AssemblyName>DIS.Database</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <SccProjectName>
+    </SccProjectName>
+    <SccProvider>
+    </SccProvider>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <GenerateCreateScript>True</GenerateCreateScript>
+    <DacApplicationName>DIS.DIS4.Database</DacApplicationName>
+    <DacVersion>4.0.0.0</DacVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <!-- VS10 without SP1 will not have VisualStudioVersion set, so do that here -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <!-- Default to the v10.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FinanceClient|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QA|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Development|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'HangFireRelease|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenericAPIFileProcessRelease|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunSqlCodeAnalysis>True</RunSqlCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenericDataProcessRelease|AnyCPU' ">
+    <OutputPath>bin\GenericDataProcessRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'RuleEngineModulesRelease|AnyCPU' ">
+    <OutputPath>bin\RuleEngineModulesRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ServerAdminRelease|AnyCPU' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ProjectDashboard|AnyCPU' ">
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'DISServerAdminRelease|AnyCPU' ">
+    <OutputPath>bin\ServerAdminRelease\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'GenericAPIFileProcessRelease2|AnyCPU' ">
+    <OutputPath>bin\GenericAPIFileProcessRelease2\</OutputPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Views\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="ProductionScripts" />
+    <Folder Include="StagingScripts" />
+    <Folder Include="DevelopmentScripts" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\User Defined Types\" />
+    <Folder Include="SchemaCompares" />
+    <Folder Include="LogAndNotificationScripts" />
+    <Folder Include="HangFire\" />
+    <Folder Include="HangFire\Tables\" />
+    <Folder Include="HangFireScripts" />
+    <Folder Include="SecurityEncryptionScripts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\RuleSet.sql" />
+    <Build Include="dbo\Tables\Business_Area.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAllTransactionRelatedLogs.sql" />
+    <Build Include="dbo\Tables\Subscriber.sql" />
+    <Build Include="dbo\Tables\Staffing_Employee_Logs.sql" />
+    <Build Include="dbo\Tables\Staffing_Clients_Logs.sql" />
+    <Build Include="dbo\Tables\Security_Authentication_Logs.sql" />
+    <Build Include="dbo\Tables\Finance_Employee_Logs.sql" />
+    <Build Include="dbo\Tables\Finance_Clients_Logs.sql" />
+    <Build Include="dbo\Tables\EMPLOYEE_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\EMPLOYEE_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\CLIENT_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\CLIENT_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\Business_Area_Application_Resource_API_Subscriber.sql" />
+    <Build Include="dbo\Tables\Business_Area_Application_Resource_API.sql" />
+    <Build Include="dbo\Tables\Business_Area_Application_Resource.sql" />
+    <Build Include="dbo\Tables\Business_Area_Application.sql" />
+    <Build Include="dbo\Tables\AppSystemErrors.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetTransactionByID.sql" />
+    <Build Include="dbo\Tables\Finance_Transaction_Logs.sql" />
+    <Build Include="dbo\Tables\Staffing_Transaction_Logs.sql" />
+    <Build Include="dbo\Tables\UKStaffing_Logs.sql" />
+    <Build Include="dbo\Tables\UKFinance_Logs.sql" />
+    <Build Include="dbo\Tables\UK_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\UK_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\EventMessageCode.sql" />
+    <Build Include="dbo\Views\vw_tmp_ErrorMessages.sql" />
+    <Build Include="dbo\Tables\SECONDARYASSIGNMENT_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\SECONDARYASSIGNMENT_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\SUPPLIERASSOCIATE_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\SUPPLIERASSOCIATE_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\Staffing_SupplierAssociate_Logs.sql" />
+    <Build Include="dbo\Tables\Staffing_SecondaryAssignment_Logs.sql" />
+    <Build Include="dbo\Tables\Finance_SecondaryAssignment_Logs.sql" />
+    <Build Include="dbo\Tables\Finance_SupplierAssociate_Logs.sql" />
+    <Build Include="dbo\Tables\HR_Employee_Logs.sql" />
+    <Build Include="dbo\Tables\HR_Transaction_Logs.sql" />
+    <Build Include="dbo\Tables\dataholding_ADP.sql" />
+    <Build Include="dbo\Tables\QRTZ_TRIGGERS.sql" />
+    <Build Include="dbo\Tables\QRTZ_SIMPROP_TRIGGERS.sql" />
+    <Build Include="dbo\Tables\QRTZ_SIMPLE_TRIGGERS.sql" />
+    <Build Include="dbo\Tables\QRTZ_SCHEDULER_STATE.sql" />
+    <Build Include="dbo\Tables\QRTZ_PAUSED_TRIGGER_GRPS.sql" />
+    <Build Include="dbo\Tables\QRTZ_LOCKS.sql" />
+    <Build Include="dbo\Tables\QRTZ_JOB_DETAILS.sql" />
+    <Build Include="dbo\Tables\QRTZ_FIRED_TRIGGERS.sql" />
+    <Build Include="dbo\Tables\QRTZ_CRON_TRIGGERS.sql" />
+    <Build Include="dbo\Tables\QRTZ_CALENDARS.sql" />
+    <Build Include="dbo\Tables\QRTZ_BLOB_TRIGGERS.sql" />
+    <Build Include="dbo\Tables\HR_Monitor_Logs.sql" />
+    <Build Include="dbo\Tables\dataholding_ADP_SU.sql" />
+    <Build Include="dbo\Tables\Calendar_Exclussion_Dates.sql" />
+    <Build Include="dbo\Tables\ADPMAINTENANCE_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\ADPMAINTENANCE_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\Staffing_Candidate_Logs.sql" />
+    <Build Include="dbo\Tables\QTRZ_Scheduler_Logs.sql" />
+    <Build Include="dbo\Tables\ADP_Scheduler_Logs.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAllTransactionLogs.sql" />
+    <Build Include="dbo\Views\vw_TransactionStatusSummary.sql" />
+    <Build Include="dbo\Views\vw_EmployeeTransaction_and_Activity.sql" />
+    <Build Include="dbo\Functions\fn_TransactionStatusSummary.sql" />
+    <Build Include="dbo\Stored Procedures\sp_TransactionStatusSummary.sql" />
+    <Build Include="dbo\Stored Procedures\sp_MonitorUpdateTransacctions.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Create_Confirmation_File.sql" />
+    <Build Include="dbo\Tables\ADP_FileProcess_TRANSACTIONACTIVITY.sql" />
+    <Build Include="dbo\Tables\ADP_FileProcess_TRANSACTION.sql" />
+    <Build Include="dbo\Tables\ADP_Maintenance_Logs.sql" />
+    <None Include="ProductionScripts\ProductionPostDeployment.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="StagingScripts\StagingPostDeploymentScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="DevelopmentScripts\DevelopmentPostDeploymentScript.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Build Include="dbo\Functions\fn_GetAllTtransactionActivities.sql" />
+    <Build Include="dbo\Functions\fn_GetAllTransactionLogs.sql" />
+    <Build Include="dbo\Functions\fn_GetAllTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\ups_GetTransactionActivityByID_AllTables.sql" />
+    <Build Include="dbo\Stored Procedures\ups_GetTransactionActivityByActivity_ID_AllTables.sql" />
+    <Build Include="dbo\Views\vw_TransactionSummaries.sql" />
+    <Build Include="dbo\Functions\fn_TransactionSummaries.sql" />
+    <Build Include="dbo\Stored Procedures\sp_TriageTransaction.sql" />
+    <Build Include="dbo\Stored Procedures\sp_LogMetrics.sql" />
+    <Build Include="dbo\Tables\NotificationWorkflows.sql" />
+    <Build Include="dbo\Tables\NotificationLevelsByApplication.sql" />
+    <Build Include="dbo\Tables\NotificationHistory.sql" />
+    <Build Include="dbo\Tables\EventWorkflows.sql" />
+    <Build Include="dbo\Tables\EventLevelsByApplication.sql" />
+    <Build Include="dbo\Tables\EventLevels.sql" />
+    <Build Include="dbo\Tables\EventCodes.sql" />
+    <Build Include="dbo\Tables\DiagTestSettings.sql" />
+    <Build Include="dbo\Tables\DiagHistoryMeta.sql" />
+    <Build Include="dbo\Tables\DiagHistory.sql" />
+    <Build Include="dbo\Tables\DiagBatchSettings.sql" />
+    <Build Include="dbo\Tables\DiagBatches.sql" />
+    <Build Include="dbo\Tables\DiagApiSettings.sql" />
+    <Build Include="dbo\Tables\Business_Area_Application_Config.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetAllNotificationEventsByAppID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_GetAllEventsByAppID.sql" />
+    <None Include="LogAndNotificationScripts\07_DIS4.1_ClientNotifications.sql" />
+    <None Include="LogAndNotificationScripts\09_DIS4.1_SuplierAssociateNotifications.sql" />
+    <Build Include="dbo\Stored Procedures\usp_GetAlActivitylTransactionRelatedLogs_1.sql" />
+    <None Include="LogAndNotificationScripts\03_DIS4.1_DropAllEventConfigurations.sql" />
+    <None Include="LogAndNotificationScripts\04_DIS4.1_EventCodes.sql" />
+    <None Include="LogAndNotificationScripts\08_DIS4.1_SecondaryAssignmentNotifications.sql" />
+    <Build Include="dbo\Tables\UserRole.sql" />
+    <Build Include="dbo\Tables\Scheduler_HangFire_Logs.sql" />
+    <Build Include="dbo\Tables\Role.sql" />
+    <Build Include="dbo\Tables\API_Caller_JobDetails.sql" />
+    <Build Include="HangFire\Tables\Schema.sql" />
+    <Build Include="HangFire\Tables\Job.sql" />
+    <Build Include="HangFire\Tables\State.sql" />
+    <Build Include="HangFire\Tables\JobParameter.sql" />
+    <Build Include="HangFire\Tables\JobQueue.sql" />
+    <Build Include="HangFire\Tables\Server.sql" />
+    <Build Include="HangFire\Tables\List.sql" />
+    <Build Include="HangFire\Tables\Set.sql" />
+    <Build Include="HangFire\Tables\AggregatedCounter.sql" />
+    <Build Include="HangFire\Tables\Counter.sql" />
+    <Build Include="HangFire\Tables\Hash.sql" />
+    <Build Include="Security\CDI_DisSvcAcct-Dev.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Security\HangFire.sql" />
+    <Build Include="dbo\Tables\UIApplication.sql" />
+    <Build Include="dbo\Tables\ApplicationAllowRole.sql" />
+    <Build Include="Security\CDI_STS IS Software Development.sql" />
+    <Build Include="Security\CDI_GG-CDI-EIS_AppSupport_Admin-FC.sql" />
+    <Build Include="Security\CDI_GG-CDI-DBA_ADMIN_ACCESS-FC.sql" />
+    <Build Include="dbo\Tables\UKStaffing_Transaction_Logs.sql" />
+    <Build Include="dbo\Tables\UKFinance_Transaction_Logs.sql" />
+    <None Include="LogAndNotificationScripts\06_DIS4.1_TransactionAPINotifications.sql" />
+    <None Include="LogAndNotificationScripts\10_DIS4.1_EmployeeMaintenanceNotifications.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Create_Confirmation_TextFile.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="DIS.Database.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DIS.Database.publish.xml" />
+    <None Include="DIS_Production.Database.publish.xml" />
+    <None Include="DIS_Staging.Database.publish.xml" />
+    <None Include="DISLocal.Database.publish.xml" />
+    <None Include="DevelopmentScripts\Deploy_DIS41_SchemaUpdates.sql" />
+    <None Include="LogAndNotificationScripts\01_DIS4.1_BasicRulesAndConfigurations.sql" />
+    <None Include="HangFireScripts\1_InsertUpdate_API_Caller_JobDetails.sql" />
+    <None Include="HangFireScripts\2_Business_Area_Application_Updates_for_HangFire.sql" />
+    <None Include="HangFireScripts\3_DIS_RBAC_Data.sql" />
+    <None Include="LogAndNotificationScripts\02_DIS4.1_RuleSetconfigurations.sql" />
+    <None Include="LogAndNotificationScripts\05_DIS4.1_LogsPerApp.sql" />
+    <None Include="LogAndNotificationScripts\10_DIS4.1_EmployeeNotifications.sql" />
+    <None Include="LogAndNotificationScripts\11_DIS4.1_UKNotifications.sql" />
+    <None Include="SecurityEncryptionScripts\1_BusinessApplicationData.sql" />
+    <None Include="LogAndNotificationScripts\CandidatePost.sql" />
+    <None Include="LogAndNotificationScripts\CandidatePut.sql" />
+    <None Include="DevelopmentScripts\DBMigrationFrom-vDIS40-To-vDIS42.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Security\Encryption.sql" />
+    <None Include="Security\CreateRoleandUserRole.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PostDeployment.sql">
+      <CopyToOutputDirectory>DoNotCopy</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DevelopmentScripts\DIS41.PostDeployment_Dev1.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

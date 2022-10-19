@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+  <?define ProductName="DIS Hangfire Scheduler Application" ?>
+
+  <?define ProductTitle="DIS.Scheduler.HangFire Installer"  ?>
+
+  <?define Manufacturer="CDI Corporation" ?>
+
+  <?define AppURL="http://www.cdicorp.com" ?>
+
+  <?define Description="Data Integration Services" ?>
+
+  <?define Comments="Data Integration Services" ?>
+
+  <?define InstallVersion="5.3.1.1" ?>
+
+  <!--<?define DROPLOCATION = "C:\Users\amajumder\TFSWorkspace\DIS\DIS4\DIS.Installers\_PublishedWebsites\DIS.Web" ?>-->
+  <!--<Property Id="DROPLOCATION"  Value=""></Property>-->
+
+
+</Include>

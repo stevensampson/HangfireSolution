@@ -1,0 +1,125 @@
+﻿@if (Model != null)
+{
+
+    @:Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+}
+else
+{
+    @:Page 0 of 0
+}
+<nav>
+    <ul class="pagination">
+        @{
+            string[] pages;
+            List<int> slot = new List<int>();
+
+            int startPage = 0;
+            int pagerange = 5;
+            int EndPage = 0;
+            int PageCount = Model != null ? Model.PageCount : 0;
+            int CurP = Model != null ? Model.PageNumber : 0;
+            bool HasNext = false;
+            bool HasPrev = false;
+
+            List<string> x = SetSlot(pagerange, PageCount);
+            pages = GetPageRange(CurP, x);
+
+            if (pages != null)
+            {
+                startPage = int.Parse(pages[0]);
+                EndPage = int.Parse(pages[pages.Length - 1]);
+
+                if (startPage > 1)
+                {
+                    HasPrev = true;
+                }
+
+                if (EndPage < PageCount)
+                {
+                    HasNext = true;
+                }
+            }
+        }
+
+        @functions{
+
+            List<string> SetSlot(int PageRange, int PageCount)
+            {
+                List<string> pages = new List<string>();
+                string v = string.Empty;
+
+                for (int s = 1, i = 1; i <= PageCount; i++)
+                {
+                    v += i.ToString() + ",";
+
+                    s++;
+
+                    if (s > PageRange)
+                    {
+                        s = 1;
+                        //remove last comma
+                        v = v.Remove(v.Length - 1);
+                        pages.Add(v);
+                        v = string.Empty;
+                    }
+                }
+
+                //add last remainings
+                if (!string.IsNullOrEmpty(v))
+                {
+                    //remove last comma
+                    v = v.Remove(v.Length - 1);
+                    pages.Add(v);
+                    v = string.Empty;
+                }
+
+                return pages;
+            }
+
+            string[] GetPageRange(int CurrentPage, List<string> s)
+            {
+                foreach (string pages in s)
+                {
+                    string[] vs = pages.Split(',');
+                    foreach (string v in vs)
+                    {
+                        if (v.Equals(CurrentPage.ToString())) return vs;
+                    }
+                }
+                return null;
+            }
+
+        }
+        @if (HasPrev)
+        {
+            <li>@Html.ActionLink("<<", "Index", new { page = startPage - 1 }, new { @onclick = "return doPaging(this)" })</li>
+        }
+        else
+        {
+
+        }
+
+        @if (pages != null)
+        {
+            foreach (string p in pages)
+            {
+                if (p == CurP.ToString())
+                {
+                    <li class="active">@Html.ActionLink(p, "Index", new { page = p }, new { @onclick = " return doPaging(this)" })</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink(p, "Index", new { page = p }, new { @onclick = "return doPaging(this)" })</li>
+                }
+            }
+        }
+        @if (HasNext)
+        {
+            <li>@Html.ActionLink(">>", "Index", new { page = EndPage + 1 }, new { @onclick = "return doPaging(this)" })</li>
+        }
+        else
+        {
+
+        }
+    </ul>
+</nav>

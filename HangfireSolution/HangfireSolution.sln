@@ -1,0 +1,127 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DIS.Database", "HangFire\DIS.Database\DIS.Database.sqlproj", "{88B13D6F-12FA-4A20-A10B-F588C27E017D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIS.Scheduler.Common", "HangFire\DIS.Scheduler.Common\DIS.Scheduler.Common.csproj", "{651117FF-E305-4E72-A9E2-E0F8B1DAA212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DIS.Scheduler.HangFire", "HangFire\DIS.Scheduler.HangFire\DIS.Scheduler.HangFire.csproj", "{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		DISServerAdminRelease|Any CPU = DISServerAdminRelease|Any CPU
+		FinanceClient|Any CPU = FinanceClient|Any CPU
+		GenericAPIFileProcessRelease|Any CPU = GenericAPIFileProcessRelease|Any CPU
+		GenericAPIFileProcessRelease2|Any CPU = GenericAPIFileProcessRelease2|Any CPU
+		GenericDataProcessRelease|Any CPU = GenericDataProcessRelease|Any CPU
+		HangFireRelease|Any CPU = HangFireRelease|Any CPU
+		ProjectDashboard|Any CPU = ProjectDashboard|Any CPU
+		QA|Any CPU = QA|Any CPU
+		Release|Any CPU = Release|Any CPU
+		RuleEngineModulesRelease|Any CPU = RuleEngineModulesRelease|Any CPU
+		ServerAdminRelease|Any CPU = ServerAdminRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Development|Any CPU.Build.0 = Development|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Development|Any CPU.Deploy.0 = Development|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.DISServerAdminRelease|Any CPU.ActiveCfg = DISServerAdminRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.DISServerAdminRelease|Any CPU.Build.0 = DISServerAdminRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.DISServerAdminRelease|Any CPU.Deploy.0 = DISServerAdminRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.FinanceClient|Any CPU.ActiveCfg = FinanceClient|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.FinanceClient|Any CPU.Build.0 = FinanceClient|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.FinanceClient|Any CPU.Deploy.0 = FinanceClient|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericAPIFileProcessRelease|Any CPU.ActiveCfg = GenericAPIFileProcessRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericAPIFileProcessRelease|Any CPU.Build.0 = GenericAPIFileProcessRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericAPIFileProcessRelease|Any CPU.Deploy.0 = GenericAPIFileProcessRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericAPIFileProcessRelease2|Any CPU.ActiveCfg = GenericAPIFileProcessRelease2|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericAPIFileProcessRelease2|Any CPU.Build.0 = GenericAPIFileProcessRelease2|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericAPIFileProcessRelease2|Any CPU.Deploy.0 = GenericAPIFileProcessRelease2|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericDataProcessRelease|Any CPU.ActiveCfg = GenericDataProcessRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericDataProcessRelease|Any CPU.Build.0 = GenericDataProcessRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.GenericDataProcessRelease|Any CPU.Deploy.0 = GenericDataProcessRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.HangFireRelease|Any CPU.ActiveCfg = HangFireRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.HangFireRelease|Any CPU.Build.0 = HangFireRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.HangFireRelease|Any CPU.Deploy.0 = HangFireRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.ProjectDashboard|Any CPU.ActiveCfg = ProjectDashboard|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.ProjectDashboard|Any CPU.Build.0 = ProjectDashboard|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.ProjectDashboard|Any CPU.Deploy.0 = ProjectDashboard|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.QA|Any CPU.ActiveCfg = QA|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.QA|Any CPU.Build.0 = QA|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.QA|Any CPU.Deploy.0 = QA|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.RuleEngineModulesRelease|Any CPU.ActiveCfg = RuleEngineModulesRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.RuleEngineModulesRelease|Any CPU.Build.0 = RuleEngineModulesRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.RuleEngineModulesRelease|Any CPU.Deploy.0 = RuleEngineModulesRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.ServerAdminRelease|Any CPU.ActiveCfg = ServerAdminRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.ServerAdminRelease|Any CPU.Build.0 = ServerAdminRelease|Any CPU
+		{88B13D6F-12FA-4A20-A10B-F588C27E017D}.ServerAdminRelease|Any CPU.Deploy.0 = ServerAdminRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.Development|Any CPU.ActiveCfg = DISServerAdminRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.Development|Any CPU.Build.0 = DISServerAdminRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.DISServerAdminRelease|Any CPU.ActiveCfg = DISServerAdminRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.DISServerAdminRelease|Any CPU.Build.0 = DISServerAdminRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.FinanceClient|Any CPU.ActiveCfg = Debug|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.FinanceClient|Any CPU.Build.0 = Debug|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.GenericAPIFileProcessRelease|Any CPU.ActiveCfg = GenericAPIFileProcessRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.GenericAPIFileProcessRelease|Any CPU.Build.0 = GenericAPIFileProcessRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.GenericAPIFileProcessRelease2|Any CPU.ActiveCfg = GenericAPIFileProcessRelease2|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.GenericAPIFileProcessRelease2|Any CPU.Build.0 = GenericAPIFileProcessRelease2|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.GenericDataProcessRelease|Any CPU.ActiveCfg = GenericDataProcessRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.GenericDataProcessRelease|Any CPU.Build.0 = GenericDataProcessRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.HangFireRelease|Any CPU.ActiveCfg = HangFireRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.HangFireRelease|Any CPU.Build.0 = HangFireRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.ProjectDashboard|Any CPU.ActiveCfg = ProjectDashboard|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.ProjectDashboard|Any CPU.Build.0 = ProjectDashboard|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.QA|Any CPU.ActiveCfg = Debug|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.QA|Any CPU.Build.0 = Debug|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.RuleEngineModulesRelease|Any CPU.ActiveCfg = RuleEngineModulesRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.RuleEngineModulesRelease|Any CPU.Build.0 = RuleEngineModulesRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.ServerAdminRelease|Any CPU.ActiveCfg = ServerAdminRelease|Any CPU
+		{651117FF-E305-4E72-A9E2-E0F8B1DAA212}.ServerAdminRelease|Any CPU.Build.0 = ServerAdminRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.Development|Any CPU.ActiveCfg = DISServerAdminRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.Development|Any CPU.Build.0 = DISServerAdminRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.DISServerAdminRelease|Any CPU.ActiveCfg = DISServerAdminRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.DISServerAdminRelease|Any CPU.Build.0 = DISServerAdminRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.FinanceClient|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.FinanceClient|Any CPU.Build.0 = Debug|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.GenericAPIFileProcessRelease|Any CPU.ActiveCfg = GenericAPIFileProcessRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.GenericAPIFileProcessRelease|Any CPU.Build.0 = GenericAPIFileProcessRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.GenericAPIFileProcessRelease2|Any CPU.ActiveCfg = GenericAPIFileProcessRelease2|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.GenericAPIFileProcessRelease2|Any CPU.Build.0 = GenericAPIFileProcessRelease2|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.GenericDataProcessRelease|Any CPU.ActiveCfg = GenericDataProcessRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.GenericDataProcessRelease|Any CPU.Build.0 = GenericDataProcessRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.HangFireRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.HangFireRelease|Any CPU.Build.0 = Release|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.ProjectDashboard|Any CPU.ActiveCfg = ProjectDashboard|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.ProjectDashboard|Any CPU.Build.0 = ProjectDashboard|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.QA|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.QA|Any CPU.Build.0 = Debug|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.RuleEngineModulesRelease|Any CPU.ActiveCfg = RuleEngineModulesRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.RuleEngineModulesRelease|Any CPU.Build.0 = RuleEngineModulesRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.ServerAdminRelease|Any CPU.ActiveCfg = ServerAdminRelease|Any CPU
+		{FD9B8834-39F7-45EC-A8BD-C66116A02DD2}.ServerAdminRelease|Any CPU.Build.0 = ServerAdminRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A718367B-3091-444E-BA4B-AB70BC145A4F}
+	EndGlobalSection
+EndGlobal

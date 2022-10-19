@@ -1,0 +1,2 @@
+﻿CREATE USER [CDI\GG-CDI-EIS_AppSupport_Admin-FC] FOR LOGIN [CDI\GG-CDI-EIS_AppSupport_Admin-FC];
+

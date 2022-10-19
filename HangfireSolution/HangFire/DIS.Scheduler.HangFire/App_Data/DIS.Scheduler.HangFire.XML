@@ -1,0 +1,2122 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DIS.Scheduler.HangFire</name>
+    </assembly>
+    <members>
+        <member name="T:DIS.Scheduler.HangFire.ApplicationPreload">
+            <summary>
+            Class ApplicationPreload.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.ApplicationPreload.Preload(System.String[])">
+            <summary>
+            Provides initialization data that is required in order to preload the application.
+            </summary>
+            <param name="parameters">Data to initialize the application. This parameter can be null or an empty array.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.BundleConfig">
+            <summary>
+            Class BundleConfig.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            Registers the bundles.
+            </summary>
+            <param name="bundles">The bundles.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.FilterConfig">
+            <summary>
+            Class FilterConfig.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            Registers the global filters.
+            </summary>
+            <param name="filters">The filters.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.RouteConfig">
+            <summary>
+            Class RouteConfig.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            Registers the routes.
+            </summary>
+            <param name="routes">The routes.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.WebApiConfig">
+            <summary>
+            Class WebApiConfig.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Register of Web API routes
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ApiDescriptionExtensions">
+            <summary>
+            Class ApiDescriptionExtensions.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription" />. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Registers the specified configuration.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.ErrorViewName">
+            <summary>
+            The error view name
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController"/> class.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController"/> class.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.Configuration">
+            <summary>
+            Gets the configuration.
+            </summary>
+            <value>The configuration.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.Api(System.String)">
+            <summary>
+            APIs the specified API identifier.
+            </summary>
+            <param name="apiId">The API identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Controllers.HelpController.ResourceModel(System.String)">
+            <summary>
+            Resources the model.
+            </summary>
+            <param name="modelName">Name of the model.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageAreaRegistration">
+            <summary>
+            Class HelpPageAreaRegistration.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageAreaRegistration.AreaName">
+            <summary>
+            Gets the name of the area to register.
+            </summary>
+            <value>The name of the area.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            Registers an area in an ASP.NET MVC application using the specified area's context information.
+            </summary>
+            <param name="context">Encapsulates the information that is required in order to register the area.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions">
+            <summary>
+            Class HelpPageConfigurationExtensions.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.ApiModelPrefix">
+            <summary>
+            The API model prefix
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> passed to the <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> passed to the <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator" /></returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration" />.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription" /> ID.</param>
+            <returns>An <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel" /></returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GenerateApiModel(System.Web.Http.Description.ApiDescription,System.Web.Http.HttpConfiguration)">
+            <summary>
+            Generates the API model.
+            </summary>
+            <param name="apiDescription">The API description.</param>
+            <param name="config">The configuration.</param>
+            <returns>HelpPageApiModel.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GenerateUriParameters(DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel,DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator)">
+            <summary>
+            Generates the URI parameters.
+            </summary>
+            <param name="apiModel">The API model.</param>
+            <param name="modelGenerator">The model generator.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.IsBindableWithTypeConverter(System.Type)">
+            <summary>
+            Determines whether [is bindable with type converter] [the specified parameter type].
+            </summary>
+            <param name="parameterType">Type of the parameter.</param>
+            <returns><c>true</c> if [is bindable with type converter] [the specified parameter type]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.AddParameterDescription(DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel,System.Web.Http.Description.ApiParameterDescription,DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription)">
+            <summary>
+            Adds the parameter description.
+            </summary>
+            <param name="apiModel">The API model.</param>
+            <param name="apiParameter">The API parameter.</param>
+            <param name="typeDescription">The type description.</param>
+            <returns>ParameterDescription.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GenerateRequestModelDescription(DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel,DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator,DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Generates the request model description.
+            </summary>
+            <param name="apiModel">The API model.</param>
+            <param name="modelGenerator">The model generator.</param>
+            <param name="sampleGenerator">The sample generator.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GenerateResourceDescription(DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel,DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator)">
+            <summary>
+            Generates the resource description.
+            </summary>
+            <param name="apiModel">The API model.</param>
+            <param name="modelGenerator">The model generator.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.GenerateSamples(DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel,DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Generates the samples.
+            </summary>
+            <param name="apiModel">The API model.</param>
+            <param name="sampleGenerator">The sample generator.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.TryGetResourceParameter(System.Web.Http.Description.ApiDescription,System.Web.Http.HttpConfiguration,System.Web.Http.Description.ApiParameterDescription@,System.Type@)">
+            <summary>
+            Tries the get resource parameter.
+            </summary>
+            <param name="apiDescription">The API description.</param>
+            <param name="config">The configuration.</param>
+            <param name="parameterDescription">The parameter description.</param>
+            <param name="resourceType">Type of the resource.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.InitializeModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>ModelDescriptionGenerator.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageConfigurationExtensions.LogInvalidSampleAsError(DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel,System.Object)">
+            <summary>
+            Logs the invalid sample as error.
+            </summary>
+            <param name="apiModel">The API model.</param>
+            <param name="sample">The sample.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.CollectionModelDescription">
+            <summary>
+            Class CollectionModelDescription.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.CollectionModelDescription.ElementDescription">
+            <summary>
+            Gets or sets the element description.
+            </summary>
+            <value>The element description.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription">
+            <summary>
+            Class ComplexTypeModelDescription.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription"/> class.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.Properties">
+            <summary>
+            Gets the properties.
+            </summary>
+            <value>The properties.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.DictionaryModelDescription">
+            <summary>
+            Class DictionaryModelDescription.
+            </summary>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription">
+            <summary>
+            Class EnumTypeModelDescription.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription"/> class.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.Values">
+            <summary>
+            Gets the values.
+            </summary>
+            <value>The values.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumValueDescription">
+            <summary>
+            Class EnumValueDescription.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Documentation">
+            <summary>
+            Gets or sets the documentation.
+            </summary>
+            <value>The documentation.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider">
+            <summary>
+            Interface IModelDocumentationProvider
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription">
+            <summary>
+            Class KeyValuePairModelDescription.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.KeyModelDescription">
+            <summary>
+            Gets or sets the key model description.
+            </summary>
+            <value>The key model description.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.ValueModelDescription">
+            <summary>
+            Gets or sets the value model description.
+            </summary>
+            <value>The value model description.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription.Documentation">
+            <summary>
+            Gets or sets the documentation.
+            </summary>
+            <value>The documentation.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription.ModelType">
+            <summary>
+            Gets or sets the type of the model.
+            </summary>
+            <value>The type of the model.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.AnnotationTextGenerator">
+            <summary>
+            The annotation text generator
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/> class.
+            </summary>
+            <param name="config">The configuration.</param>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels">
+            <summary>
+            Gets the generated models.
+            </summary>
+            <value>The generated models.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GetOrCreateModelDescription(System.Type)">
+            <summary>
+            Gets the or create model description.
+            </summary>
+            <param name="modelType">Type of the model.</param>
+            <returns>DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription" /> generated for a type.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelNameAttribute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.Name">
+            <summary>
+            Gets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelNameHelper">
+            <summary>
+            Class ModelNameHelper.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelNameHelper.GetModelName(System.Type)">
+            <summary>
+            Gets the name of the model.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterAnnotation">
+            <summary>
+            Class ParameterAnnotation.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.AnnotationAttribute">
+            <summary>
+            Gets or sets the annotation attribute.
+            </summary>
+            <value>The annotation attribute.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.Documentation">
+            <summary>
+            Gets or sets the documentation.
+            </summary>
+            <value>The documentation.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription">
+            <summary>
+            Class ParameterDescription.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> class.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations">
+            <summary>
+            Gets the annotations.
+            </summary>
+            <value>The annotations.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription.Documentation">
+            <summary>
+            Gets or sets the documentation.
+            </summary>
+            <value>The documentation.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription.TypeDescription">
+            <summary>
+            Gets or sets the type description.
+            </summary>
+            <value>The type description.</value>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.SimpleTypeModelDescription">
+            <summary>
+            Class SimpleTypeModelDescription.
+            </summary>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel" /> class.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription" /> that describes the API.
+            </summary>
+            <value>The API description.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ParameterDescription" /> collection that describes the URI parameters for the API.
+            </summary>
+            <value>The URI parameters.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+            <value>The request documentation.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription" /> that describes the request body.
+            </summary>
+            <value>The request model description.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+            <value>The request body parameters.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription" /> that describes the resource.
+            </summary>
+            <value>The resource description.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+            <value>The resource properties.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+            <value>The sample requests.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+            <value>The sample responses.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+            <value>The error messages.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.Models.HelpPageApiModel.GetParameterDescriptions(DIS.Scheduler.HangFire.Areas.HelpPage.ModelDescriptions.ModelDescription)">
+            <summary>
+            Gets the parameter descriptions.
+            </summary>
+            <param name="modelDescription">The model description.</param>
+            <returns>IList&lt;ParameterDescription&gt;.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.documentNavigators">
+            <summary>
+            The document navigators
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.TypeExpression">
+            <summary>
+            The type expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.MethodExpression">
+            <summary>
+            The method expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.PropertyExpression">
+            <summary>
+            The property expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.FieldExpression">
+            <summary>
+            The field expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.ParameterExpression">
+            <summary>
+            The parameter expression
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.#ctor(System.String[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider" /> class.
+            </summary>
+            <param name="documentPaths">The physical paths to XML documents.</param>
+            <exception cref="T:System.ArgumentNullException">documentPaths</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Gets the documentation based on <see cref="T:System.Web.Http.Controllers.HttpControllerDescriptor" />.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>The documentation for the controller.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the documentation based on <see cref="T:System.Web.Http.Controllers.HttpActionDescriptor" />.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>The documentation for the action.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpParameterDescriptor)">
+            <summary>
+            Gets the documentation based on <see cref="T:System.Web.Http.Controllers.HttpParameterDescriptor" />.
+            </summary>
+            <param name="parameterDescriptor">The parameter descriptor.</param>
+            <returns>The documentation for the parameter.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the documentation based on <see cref="T:MemberInfo" />.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>The documentation for the member.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            Gets the documentation for the specified type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The documentation for the type.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetResponseDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the response documentation.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>A html-formatted string for the action response.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetMethodNode(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the method node.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>A xpath navigator.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetTypeNode(System.Type)">
+            <summary>
+            Gets the type node.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>A xpath navigator.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetMemberName(System.Reflection.MethodInfo)">
+            <summary>
+            Gets the member name.
+            </summary>
+            <param name="method">The method.</param>
+            <returns>The member name.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetTypeName(System.Type)">
+            <summary>
+            Gets the type name.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The type name.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetTagValueForController(System.Xml.XPath.XPathNavigator,System.String)">
+            <summary>
+            Gets the tag value for a controller.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="tagName">The tag name.</param>
+            <returns>A html-formatted representation of the tag value.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetTagValueForAction(System.Xml.XPath.XPathNavigator,System.String)">
+            <summary>
+            Gets the tag value for a controller.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="tagName">The tag name.</param>
+            <returns>A html-formatted representation of the tag value.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.GetTagValue(System.Xml.XPath.XPathNavigator,System.String)">
+            <summary>
+            Gets the tag value.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="tagName">The tag name.</param>
+            <returns>A html-formatted representation of the tag value.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.MultipleXmlDocumentationProvider.ConvertDocTagsToHtml(System.String)">
+            <summary>
+            Converts the document tags to HTML.
+            </summary>
+            <param name="i">The input xml.</param>
+            <returns>A HTML-formatted string.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator" /> class.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage" /> or <see cref="T:System.Net.Http.HttpResponseMessage" />.
+            </summary>
+            <value>The actual HTTP message types.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+            <value>The action samples.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+            <value>The sample objects.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null" /> object.
+            </summary>
+            <value>The sample object factories.</value>
+            <remarks>Collection includes just <see cref="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)" /> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription" />.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription" />.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+            <exception cref="T:System.ArgumentNullException">api</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples" />.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters.
+            First, it will look at the <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects" />. If no sample object is found, it will try to create
+            one using <see cref="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator,System.Type)" /> (which wraps an <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator" />) and other
+            factories in <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories" />.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1" /> passed to the <see cref="T:System.Net.Http.HttpRequestMessage" /> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage" /> or <see cref="T:System.Net.Http.HttpResponseMessage" /> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription" />.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+            <returns>Type.</returns>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">sampleDirection</exception>
+            <exception cref="T:System.ArgumentNullException">api</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns>System.Object.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            formatter
+            or
+            mediaType
+            </exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.UnwrapException(System.Exception)">
+            <summary>
+            Unwraps the exception.
+            </summary>
+            <param name="exception">The exception.</param>
+            <returns>Exception.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator,System.Type)">
+            <summary>
+            Defaults the sample object factory.
+            </summary>
+            <param name="sampleGenerator">The sample generator.</param>
+            <param name="type">The type.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.TryFormatJson(System.String)">
+            <summary>
+            Tries the format json.
+            </summary>
+            <param name="str">The string.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.TryFormatXml(System.String)">
+            <summary>
+            Tries the format XML.
+            </summary>
+            <param name="str">The string.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.IsFormatSupported(DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection,System.Net.Http.Formatting.MediaTypeFormatter,System.Type)">
+            <summary>
+            Determines whether [is format supported] [the specified sample direction].
+            </summary>
+            <param name="sampleDirection">The sample direction.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="type">The type.</param>
+            <returns><c>true</c> if [is format supported] [the specified sample direction]; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.GetAllActionSamples(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets all action samples.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The sample direction.</param>
+            <returns>IEnumerable&lt;KeyValuePair&lt;HelpPageSampleKey, System.Object&gt;&gt;.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleGenerator.WrapSampleIfString(System.Object)">
+            <summary>
+            Wraps the sample if string.
+            </summary>
+            <param name="sample">The sample.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey" /> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <exception cref="T:System.ArgumentNullException">mediaType</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey" /> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+            <exception cref="T:System.ArgumentNullException">type</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.#ctor(DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey" /> based on <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.SampleDirection" />, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.SampleDirection" />.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <exception cref="T:System.ComponentModel.InvalidEnumArgumentException">sampleDirection</exception>
+            <exception cref="T:System.ArgumentNullException">controllerName
+            or
+            actionName
+            or
+            parameterNames</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey" /> based on media type, <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.SampleDirection" />, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.SampleDirection" />.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <exception cref="T:System.ArgumentNullException">mediaType</exception>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>The name of the controller.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>The name of the action.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>The media type.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+            <value>The parameter names.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.ParameterType">
+            <summary>
+            Gets the type of the parameter.
+            </summary>
+            <value>The type of the parameter.</value>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.SampleDirection" />.
+            </summary>
+            <value>The sample direction.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.HelpPageSampleKey.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample" /> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+            <exception cref="T:System.ArgumentNullException">src</exception>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample.Src">
+            <summary>
+            Gets the source.
+            </summary>
+            <value>The source.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ImageSample.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample"/> class.
+            </summary>
+            <param name="errorMessage">The error message.</param>
+            <exception cref="T:System.ArgumentNullException">errorMessage</exception>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample.ErrorMessage">
+            <summary>
+            Gets the error message.
+            </summary>
+            <value>The error message.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.InvalidSample.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.DefaultCollectionSize">
+            <summary>
+            The default collection size
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.SimpleObjectGenerator">
+            <summary>
+            The simple object generator
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32" />, <see cref="T:System.String" />, <see cref="T:System.Enum" />, <see cref="T:System.DateTime" />, <see cref="T:System.Uri" />, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1" />.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2" />
+            Tuples: <see cref="T:System.Tuple`1" />, <see cref="T:System.Tuple`2" />, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2" /> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2" />.
+            Collections: <see cref="T:System.Collections.Generic.IList`1" />, <see cref="T:System.Collections.Generic.IEnumerable`1" />, <see cref="T:System.Collections.Generic.ICollection`1" />, <see cref="T:System.Collections.IList" />, <see cref="T:System.Collections.IEnumerable" />, <see cref="T:System.Collections.ICollection" /> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1" /> or <see cref="T:System.Collections.IList" />.
+            Queryables: <see cref="T:System.Linq.IQueryable" />, <see cref="T:System.Linq.IQueryable`1" />.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the object.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateGenericType(System.Type,System.Int32,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the type of the generic.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="collectionSize">Size of the collection.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateTuple(System.Type,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the tuple.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.IsTuple(System.Type)">
+            <summary>
+            Determines whether the specified generic type definition is tuple.
+            </summary>
+            <param name="genericTypeDefinition">The generic type definition.</param>
+            <returns><c>true</c> if the specified generic type definition is tuple; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateKeyValuePair(System.Type,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the key value pair.
+            </summary>
+            <param name="keyValuePairType">Type of the key value pair.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateArray(System.Type,System.Int32,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the array.
+            </summary>
+            <param name="arrayType">Type of the array.</param>
+            <param name="size">The size.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateDictionary(System.Type,System.Int32,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the dictionary.
+            </summary>
+            <param name="dictionaryType">Type of the dictionary.</param>
+            <param name="size">The size.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateEnum(System.Type)">
+            <summary>
+            Generates the enum.
+            </summary>
+            <param name="enumType">Type of the enum.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateQueryable(System.Type,System.Int32,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the queryable.
+            </summary>
+            <param name="queryableType">Type of the queryable.</param>
+            <param name="size">The size.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateCollection(System.Type,System.Int32,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the collection.
+            </summary>
+            <param name="collectionType">Type of the collection.</param>
+            <param name="size">The size.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateNullable(System.Type,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the nullable.
+            </summary>
+            <param name="nullableType">Type of the nullable.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.GenerateComplexObject(System.Type,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Generates the complex object.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+            <returns>System.Object.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.SetPublicProperties(System.Type,System.Object,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Sets the public properties.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="obj">The object.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.SetPublicFields(System.Type,System.Object,System.Collections.Generic.Dictionary{System.Type,System.Object})">
+            <summary>
+            Sets the public fields.
+            </summary>
+            <param name="type">The type.</param>
+            <param name="obj">The object.</param>
+            <param name="createdObjectReferences">The created object references.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator">
+            <summary>
+            Class SimpleTypeObjectGenerator.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator._index">
+            <summary>
+            The _index
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.ObjectGenerator.SimpleTypeObjectGenerator.DefaultGenerators">
+            <summary>
+            The default generators
+            </summary>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection.Request">
+            <summary>
+            The request
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.SampleDirection.Response">
+            <summary>
+            The response
+            </summary>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample"/> class.
+            </summary>
+            <param name="text">The text.</param>
+            <exception cref="T:System.ArgumentNullException">text</exception>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample.Text">
+            <summary>
+            Gets the text.
+            </summary>
+            <value>The text.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" /> is equal to this instance.
+            </summary>
+            <param name="obj">The object to compare with the current object.</param>
+            <returns><c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.TextSample.ToString">
+            <summary>
+            Returns a <see cref="T:System.String" /> that represents this instance.
+            </summary>
+            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider" /> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider._documentNavigator">
+            <summary>
+            The _document navigator
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.TypeExpression">
+            <summary>
+            The type expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.MethodExpression">
+            <summary>
+            The method expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.PropertyExpression">
+            <summary>
+            The property expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.FieldExpression">
+            <summary>
+            The field expression
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.ParameterExpression">
+            <summary>
+            The parameter expression
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider" /> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+            <exception cref="T:System.ArgumentNullException">documentPath</exception>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="controllerDescriptor">The controller descriptor.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the documentation based on <see cref="T:System.Web.Http.Controllers.HttpActionDescriptor" />.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>The documentation for the controller.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpParameterDescriptor)">
+            <summary>
+            Gets the documentation based on <see cref="T:System.Web.Http.Controllers.HttpParameterDescriptor" />.
+            </summary>
+            <param name="parameterDescriptor">The parameter descriptor.</param>
+            <returns>The documentation for the controller.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetResponseDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the response documentation.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="member">The member.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            Gets the documentation.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetMethodNode(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            Gets the method node.
+            </summary>
+            <param name="actionDescriptor">The action descriptor.</param>
+            <returns>XPathNavigator.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetMemberName(System.Reflection.MethodInfo)">
+            <summary>
+            Gets the name of the member.
+            </summary>
+            <param name="method">The method.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetTagValue(System.Xml.XPath.XPathNavigator,System.String)">
+            <summary>
+            Gets the tag value.
+            </summary>
+            <param name="parentNode">The parent node.</param>
+            <param name="tagName">Name of the tag.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetTypeNode(System.Type)">
+            <summary>
+            Gets the type node.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>XPathNavigator.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Areas.HelpPage.XmlDocumentationProvider.GetTypeName(System.Type)">
+            <summary>
+            Gets the name of the type.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Controllers.HomeController">
+            <summary>
+            Class HomeController.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Controllers.HomeController.Index">
+            <summary>
+            Indexes this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Controllers.HomeController.About">
+            <summary>
+            Abouts this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Controllers.HomeController.Contact">
+            <summary>
+            Contacts this instance.
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Controllers.ManagerController">
+            <summary>
+            Class ManagerController.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Controllers.ManagerController.appProfile">
+            <summary>
+            The application profile
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Controllers.ManagerController.CreateOnceAndDoneJob(DIS.Scheduler.Common.Models.API_Caller_JobDetails)">
+            <summary>
+            Creates a "Once and Done" job on the HangFire scheduling system.
+            </summary>
+            <param name="API_Caller_JobDetails">The API_Caller_JobDetails</param>
+            <returns>ServiceApiResponse.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Controllers.ManagerController.CreateScheduledJob(DIS.Scheduler.Common.Models.API_Caller_JobDetails)">
+            <summary>
+            Creates the scheduled job.
+            </summary>
+            <param name="API_Caller_JobDetails">The ap i_ caller_ job details.</param>
+            <returns>ServiceApiResponse.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Controllers.ManagerController.GetRequestUrl">
+            <summary>
+            Gets the request URL.
+            </summary>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.MvcApplication">
+            <summary>
+            Class MvcApplication.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.MvcApplication.Application_Start">
+            <summary>
+            Application_s the start.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.MvcApplication.Application_End(System.Object,System.EventArgs)">
+            <summary>
+            Handles the End event of the Application control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.HangfireBootstrapper">
+            <summary>
+            Class HangfireBootstrapper.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.HangfireBootstrapper.Instance">
+            <summary>
+            The instance
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.HangfireBootstrapper._lockObject">
+            <summary>
+            The _lock object
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.HangfireBootstrapper._started">
+            <summary>
+            Returns boolean on the status of the Hangfire object.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.HangfireBootstrapper._backgroundJobServer">
+            <summary>
+            The background job server
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.HangfireBootstrapper.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:DIS.Scheduler.HangFire.HangfireBootstrapper"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.HangfireBootstrapper.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.HangfireBootstrapper.Stop">
+            <summary>
+            Stops this instance.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.HangfireBootstrapper.System#Web#Hosting#IRegisteredObject#Stop(System.Boolean)">
+            <summary>
+            Requests a registered object to unregister.
+            </summary>
+            <param name="immediate">true to indicate the registered object should unregister from the hosting environment before returning; otherwise, false.</param>
+        </member>
+        <member name="T:DIS.Scheduler.HangFire.Models.NotificationHub">
+            <summary>
+            Class NotificationHub.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.HangFire.Models.NotificationHub.job_status">
+            <summary>
+            The job_status
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.HangFire.Models.NotificationHub.Job_ID">
+            <summary>
+            Gets or sets the job_ identifier.
+            </summary>
+            <value>The job_ identifier.</value>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Models.NotificationHub.OnConnected">
+            <summary>
+            Called when [connected].
+            </summary>
+            <returns>Task.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Models.NotificationHub.SendNotifications(System.String)">
+            <summary>
+            Sends the notifications.
+            </summary>
+            <param name="job_id">The job_id.</param>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Models.NotificationHub.CheckStatus">
+            <summary>
+            Checks the status.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.HangFire.Models.NotificationHub.dependency_OnChange(System.Object,System.Data.SqlClient.SqlNotificationEventArgs)">
+            <summary>
+            Handles the OnChange event of the dependency control.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The <see cref="T:System.Data.SqlClient.SqlNotificationEventArgs"/> instance containing the event data.</param>
+        </member>
+        <member name="T:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController">
+            <summary>
+            Class API_Caller_JobDetailsController.
+            </summary>
+        </member>
+        <member name="P:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Project">
+            <summary>
+            Gets or sets the project.
+            </summary>
+            <value>The project.</value>
+        </member>
+        <member name="F:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.rep">
+            <summary>
+            The repository class for API_JobDetail table
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController"/> class.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Index">
+            <summary>
+            Indexes this instance.
+            GET: API_Caller_JobDetails
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Details the specified identifier.
+            GET: API_Caller_JobDetails/Details/5
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Create">
+            <summary>
+            Creates this instance.
+            GET: API_Caller_JobDetails/Create
+            </summary>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Create(DIS.Scheduler.Hangfire.Models.APICaller_JobDetails)">
+            <summary>
+            Creates the specified a p i_ caller_ job details.
+            </summary>
+            <param name="aPI_Caller_JobDetails">a p i_ caller_ job details.</param>
+            <returns>ActionResult.</returns>
+            <remarks>POST: API_Caller_JobDetails/Create
+            To protect from overposting attacks, please enable the specific properties you want to bind to, for
+            more details see http://go.microsoft.com/fwlink/?LinkId=317598.</remarks>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Edits the specified identifier.
+            GET: API_Caller_JobDetails/Edit/5
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.GetJobDetailModel(DIS.Scheduler.Common.Models.API_Caller_JobDetails)">
+            <summary>
+            Gets the job detail model.
+            </summary>
+            <param name="aPI_Caller_JobDetails">a p i_ caller_ job details.</param>
+            <returns>APICaller_JobDetails.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.GetJobDetailObject(DIS.Scheduler.Hangfire.Models.APICaller_JobDetails)">
+            <summary>
+            Gets the job detail object.
+            </summary>
+            <param name="aPI_Caller_JobDetails">a p i_ caller_ job details.</param>
+            <returns>API_Caller_JobDetails.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Edit(DIS.Scheduler.Hangfire.Models.APICaller_JobDetails)">
+            <summary>
+            Edits the specified a p i_ caller_ job details.
+            </summary>
+            <param name="aPI_Caller_JobDetails">a p i_ caller_ job details.</param>
+            <returns>ActionResult.</returns>
+            <remarks>POST: API_Caller_JobDetails/Edit/5
+            To protect from overposting attacks, please enable the specific properties you want to bind to, for
+            more details see http://go.microsoft.com/fwlink/?LinkId=317598.</remarks>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Deletes the specified identifier.
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Deletes the confirmed.
+            POST: API_Caller_JobDetails/Delete/5
+            </summary>
+            <param name="id">The identifier.</param>
+            <returns>ActionResult.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.GetJobTypes(System.String)">
+            <summary>
+            Gets the job types.
+            </summary>
+            <param name="SelectValue">The select value.</param>
+            <returns>SelectList.</returns>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Controllers.API_Caller_JobDetailsController.Dispose(System.Boolean)">
+            <summary>
+            Releases unmanaged resources and optionally releases managed resources.
+            </summary>
+            <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+        </member>
+        <member name="T:DIS.Scheduler.Hangfire.Models.APICaller_JobDetails">
+            <summary>
+            Class APICaller_JobDetails.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Models.APICaller_JobDetails.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DIS.Scheduler.Hangfire.Models.APICaller_JobDetails"/> class.
+            </summary>
+        </member>
+        <member name="F:DIS.Scheduler.Hangfire.Models.APICaller_JobDetails.JobTypeList">
+            <summary>
+            All enum value
+            </summary>
+        </member>
+        <member name="T:DIS.Scheduler.Hangfire.Startup">
+            <summary>
+            Class Startup.
+            </summary>
+        </member>
+        <member name="M:DIS.Scheduler.Hangfire.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configurations the specified application.
+            </summary>
+            <param name="app">The application.</param>
+        </member>
+        <member name="T:NavigationRoutes.INavigationRouteFilter">
+            <summary>
+            Interface INavigationRouteFilter
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.INavigationRouteFilter.ShouldRemove(System.Web.Routing.Route)">
+            <summary>
+            Shoulds the remove.
+            </summary>
+            <param name="navigationRoutes">The navigation routes.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:NavigationRoutes.NamedRoute">
+            <summary>
+            Class NamedRoute.
+            </summary>
+        </member>
+        <member name="F:NavigationRoutes.NamedRoute._name">
+            <summary>
+            The _name
+            </summary>
+        </member>
+        <member name="F:NavigationRoutes.NamedRoute._displayName">
+            <summary>
+            The _display name
+            </summary>
+        </member>
+        <member name="F:NavigationRoutes.NamedRoute._childRoutes">
+            <summary>
+            The _child routes
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.NamedRoute.#ctor(System.String,System.String,System.Web.Routing.IRouteHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.NamedRoute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="url">The URL.</param>
+            <param name="routeHandler">The route handler.</param>
+        </member>
+        <member name="M:NavigationRoutes.NamedRoute.#ctor(System.String,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.NamedRoute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="url">The URL.</param>
+            <param name="defaults">The defaults.</param>
+            <param name="constraints">The constraints.</param>
+            <param name="routeHandler">The route handler.</param>
+        </member>
+        <member name="M:NavigationRoutes.NamedRoute.#ctor(System.String,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.NamedRoute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="url">The URL.</param>
+            <param name="defaults">The defaults.</param>
+            <param name="constraints">The constraints.</param>
+            <param name="dataTokens">The data tokens.</param>
+            <param name="routeHandler">The route handler.</param>
+        </member>
+        <member name="M:NavigationRoutes.NamedRoute.#ctor(System.String,System.String,System.String,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.RouteValueDictionary,System.Web.Routing.IRouteHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.NamedRoute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="url">The URL.</param>
+            <param name="defaults">The defaults.</param>
+            <param name="constraints">The constraints.</param>
+            <param name="dataTokens">The data tokens.</param>
+            <param name="routeHandler">The route handler.</param>
+        </member>
+        <member name="M:NavigationRoutes.NamedRoute.#ctor(System.String,System.String,System.String,System.Web.Mvc.MvcRouteHandler)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.NamedRoute"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="url">The URL.</param>
+            <param name="routeHandler">The route handler.</param>
+        </member>
+        <member name="P:NavigationRoutes.NamedRoute.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:NavigationRoutes.NamedRoute.DisplayName">
+            <summary>
+            Gets or sets the display name.
+            </summary>
+            <value>The display name.</value>
+        </member>
+        <member name="P:NavigationRoutes.NamedRoute.Children">
+            <summary>
+            Gets the children.
+            </summary>
+            <value>The children.</value>
+        </member>
+        <member name="P:NavigationRoutes.NamedRoute.IsChild">
+            <summary>
+            Gets or sets a value indicating whether this instance is child.
+            </summary>
+            <value><c>true</c> if this instance is child; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="T:NavigationRoutes.CompositeMvcHtmlString">
+            <summary>
+            Class CompositeMvcHtmlString.
+            </summary>
+        </member>
+        <member name="F:NavigationRoutes.CompositeMvcHtmlString._strings">
+            <summary>
+            The _strings
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.CompositeMvcHtmlString.#ctor(System.Collections.Generic.IEnumerable{System.Web.IHtmlString})">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.CompositeMvcHtmlString"/> class.
+            </summary>
+            <param name="strings">The strings.</param>
+        </member>
+        <member name="M:NavigationRoutes.CompositeMvcHtmlString.ToHtmlString">
+            <summary>
+            Returns an HTML-encoded string.
+            </summary>
+            <returns>An HTML-encoded string.</returns>
+        </member>
+        <member name="T:NavigationRoutes.NavigationRoutes">
+            <summary>
+            Class NavigationRoutes.
+            </summary>
+        </member>
+        <member name="F:NavigationRoutes.NavigationRoutes.Filters">
+            <summary>
+            The filters
+            </summary>
+        </member>
+        <member name="T:NavigationRoutes.NavigationViewExtensions">
+            <summary>
+            Class NavigationViewExtensions.
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.NavigationViewExtensions.Navigation(System.Web.Mvc.HtmlHelper)">
+            <summary>
+            Navigations the specified helper.
+            </summary>
+            <param name="helper">The helper.</param>
+            <returns>IHtmlString.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationViewExtensions.GetRoutesForCurrentRequest(System.Web.Routing.RouteCollection,System.Collections.Generic.IEnumerable{NavigationRoutes.INavigationRouteFilter})">
+            <summary>
+            Gets the routes for current request.
+            </summary>
+            <param name="routes">The routes.</param>
+            <param name="routeFilters">The route filters.</param>
+            <returns>IEnumerable&lt;NamedRoute&gt;.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationViewExtensions.NavigationListItemRouteLink(System.Web.Mvc.HtmlHelper,NavigationRoutes.NamedRoute)">
+            <summary>
+            Navigations the list item route link.
+            </summary>
+            <param name="html">The HTML.</param>
+            <param name="route">The route.</param>
+            <returns>MvcHtmlString.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationViewExtensions.CurrentRouteMatchesName(System.Web.Mvc.HtmlHelper,System.String)">
+            <summary>
+            Currents the name of the route matches.
+            </summary>
+            <param name="html">The HTML.</param>
+            <param name="routeName">Name of the route.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+        <member name="T:NavigationRoutes.NavigationRouteConfigurationExtensions">
+            <summary>
+            Class NavigationRouteConfigurationExtensions.
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.MapNavigationRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Maps the navigation route.
+            </summary>
+            <param name="routes">The routes.</param>
+            <param name="name">The name.</param>
+            <param name="url">The URL.</param>
+            <param name="defaults">The defaults.</param>
+            <param name="constraints">The constraints.</param>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.MapNavigationRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.String,System.Object,System.Object)">
+            <summary>
+            Maps the navigation route.
+            </summary>
+            <param name="routes">The routes.</param>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="url">The URL.</param>
+            <param name="defaults">The defaults.</param>
+            <param name="constraints">The constraints.</param>
+            <returns>NavigationRouteBuilder.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.MapNavigationRoute(System.Web.Routing.RouteCollection,System.String,System.String,System.String,System.Object,System.String[],System.Object)">
+            <summary>
+            Maps the navigation route.
+            </summary>
+            <param name="routes">The routes.</param>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="url">The URL.</param>
+            <param name="defaults">The defaults.</param>
+            <param name="namespaces">The namespaces.</param>
+            <param name="constraints">The constraints.</param>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.MapNavigationRoute``1(System.Web.Routing.RouteCollection,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Web.Mvc.ActionResult}},System.String)">
+            <summary>
+            Maps the navigation route.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="routes">The routes.</param>
+            <param name="displayName">The display name.</param>
+            <param name="action">The action.</param>
+            <param name="areaName">Name of the area.</param>
+            <returns>NavigationRouteBuilder.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.AddChildRoute``1(NavigationRoutes.NavigationRouteBuilder,System.String,System.Linq.Expressions.Expression{System.Func{``0,System.Web.Mvc.ActionResult}},System.String)">
+            <summary>
+            Adds the child route.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="builder">The builder.</param>
+            <param name="DisplayText">The display text.</param>
+            <param name="action">The action.</param>
+            <param name="areaName">Name of the area.</param>
+            <returns>NavigationRouteBuilder.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.ToDefaultAction``1(NavigationRoutes.NamedRoute,System.Linq.Expressions.Expression{System.Func{``0,System.Web.Mvc.ActionResult}},System.String)">
+            <summary>
+            To the default action.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="route">The route.</param>
+            <param name="action">The action.</param>
+            <param name="areaName">Name of the area.</param>
+            <returns>NamedRoute.</returns>
+            <exception cref="T:System.ArgumentException">
+            Expression must be a method call
+            or
+            Method call must target lambda argument
+            </exception>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.CreateUrl(System.String,System.String,System.String)">
+            <summary>
+            Creates the URL.
+            </summary>
+            <param name="actionName">Name of the action.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="areaName">Name of the area.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteConfigurationExtensions.CreateUrl(System.String,System.String)">
+            <summary>
+            Creates the URL.
+            </summary>
+            <param name="actionName">Name of the action.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <returns>System.String.</returns>
+        </member>
+        <member name="T:NavigationRoutes.NavigationRouteBuilder">
+            <summary>
+            Class NavigationRouteBuilder.
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteBuilder.#ctor(System.Web.Routing.RouteCollection,NavigationRoutes.NamedRoute)">
+            <summary>
+            Initializes a new instance of the <see cref="T:NavigationRoutes.NavigationRouteBuilder"/> class.
+            </summary>
+            <param name="routes">The routes.</param>
+            <param name="parent">The parent.</param>
+        </member>
+        <member name="P:NavigationRoutes.NavigationRouteBuilder._routes">
+            <summary>
+            Gets or sets the _routes.
+            </summary>
+            <value>The _routes.</value>
+        </member>
+        <member name="P:NavigationRoutes.NavigationRouteBuilder._parent">
+            <summary>
+            Gets or sets the _parent.
+            </summary>
+            <value>The _parent.</value>
+        </member>
+        <member name="T:NavigationRoutes.NavigationRouteFilter">
+            <summary>
+            Class NavigationRouteFilter.
+            </summary>
+        </member>
+        <member name="M:NavigationRoutes.NavigationRouteFilter.ShouldRemove(System.Web.Routing.Route)">
+            <summary>
+            Shoulds the remove.
+            </summary>
+            <param name="route">The route.</param>
+            <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
+        </member>
+    </members>
+</doc>

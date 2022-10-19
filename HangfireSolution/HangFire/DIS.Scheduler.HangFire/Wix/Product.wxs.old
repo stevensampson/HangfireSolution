@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+    <?include IntializeProperty.wxi ?>
+    <Product Id="FABEB058-27D0-4A01-8F28-6A0C66B3E326" Name="$(var.ProductName)" Language="1033" Version="$(var.InstallVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="CAB91BC4-3811-4697-9F14-EFB6C5D7DDE1">
+        <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Comments="Data integration Service Copyright CDI Corporation" Description="Data Integration Service HangFire Scheduler 5.0" InstallPrivileges="elevated" />
+        <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+        <Media Id="1" Cabinet="DIS.Scheduler.HangFire.cab" EmbedCab="yes" />
+        <Feature Id="ProductFeature" Title="DIS.Scheduler.HangFire.Setup" Level="1">
+            <ComponentGroupRef Id="DISComponents" />
+            <ComponentGroupRef Id="MarkUpEnvironment" />
+            <ComponentRef Id="RegistryComponent" />
+            <ComponentRef Id="FolderComponent" />
+        </Feature>
+        <Property Id="WIXUI_INSTALLDIR" Value="INETPUB" />
+        <UIRef Id="WebUI" />
+        <Property Id="ENVIRONMENT" Value="DEV" />
+        <Property Id="INSTANCEID" Value="0" />
+        <!-- UI customization -->
+        <!--<WixVariable Id="WixUIBannerBmp" Value="Logo\cdi_header.bmp" />
+        <WixVariable Id="WixUIDialogBmp" Value="Logo\cdi_Logo.bmp" />-->
+        <!--<WixVariable Id="publishDir" Value="" />-->
+        <UI />
+        <InstanceTransforms Property="INSTANCEID">
+            <Instance Id="I101" ProductCode="5CCDB5A6-9D8E-4066-B604-3085D7C455D7" UpgradeCode="D3312845-0494-4151-BE3F-D4CAD60EB638" ProductName="DIS Hangfire Scheduler Application Instance I101" />
+            <Instance Id="I102" ProductCode="F341ABB6-0886-491F-B7A1-E9D4925855D9" UpgradeCode="0D2D2CCF-8434-4FBB-B8EC-517E760A53A3" ProductName="DIS Hangfire Scheduler Application Instance I102" />
+            <Instance Id="I103" ProductCode="95CCC8B3-A984-4523-8DBF-65FE748EBD81" UpgradeCode="2A643CBB-F152-4B62-A4CF-1567A50002E3" ProductName="DIS Hangfire Scheduler Application Instance I103" />
+            <Instance Id="I104" ProductCode="86348668-C116-490D-8714-0DAE0DB0DA91" ProductName="DIS Hangfire Scheduler Application Instance I104" UpgradeCode="B058FE50-6461-4F8C-A5D1-B84ED0C1CF88" />
+            <Instance Id="I105" ProductCode="B6E841A6-B3AC-4BFB-AE88-2A609D37FD85" ProductName="DIS Hangfire Scheduler Application Instance I105" UpgradeCode="D7395C5D-EFB1-4204-BFA8-0324790ECAB0" />
+            <Instance Id="I106" ProductCode="ADCA0B32-092B-4C03-B28F-46BC951119AC" ProductName="DIS Hangfire Scheduler Application Instance I106" UpgradeCode="55300E67-64CD-4D12-B60C-0CC2E1B80764" />
+            <Instance Id="I107" ProductCode="EC881F12-E318-4A9A-B60A-2CB2F9E9E01E" ProductName="DIS Hangfire Scheduler Application Instance I107" UpgradeCode="5655E782-B69D-4054-8119-71497AFF3F6F" />
+            <Instance Id="I108" ProductCode="659705A3-59A3-4A1F-8B44-6BE377EF3BB0" ProductName="DIS Hangfire Scheduler Application Instance I108" UpgradeCode="4EB59287-071C-4F40-B5A1-C1E5E9010D1E" />
+            <Instance Id="I109" ProductCode="4FB57FF0-4140-4045-81DF-6AFDDB4739CB" ProductName="DIS Hangfire Scheduler Application Instance I109" UpgradeCode="2DBCD84C-7CE5-4EAF-BAAE-C432443B6D49" />
+            <Instance Id="I110" ProductCode="DF5FABFF-31CD-45B0-ACA1-204D0DDBC5C6" ProductName="DIS Hangfire Scheduler Application Instance I110" UpgradeCode="052FE751-511C-4D7B-92CF-87257D7A0058" />
+            <Instance Id="I111" ProductCode="88CF01B8-120B-4B89-B686-76278653F493" ProductName="DIS Hangfire Scheduler Application Instance I111" UpgradeCode="B8E49FC2-455D-44F9-A65E-A6A651658562" />
+            <Instance Id="I112" ProductCode="51AA2A13-3C0E-4F31-B80A-597DC15BCF0C" ProductName="DIS Hangfire Scheduler Application Instance I112" UpgradeCode="194BD027-3F68-4719-88A3-79F22C1EE510" />
+            <Instance Id="I113" ProductCode="3A76D436-89E4-4A37-A35E-BE3032DC52A4" ProductName="DIS Hangfire Scheduler Application Instance I113" UpgradeCode="020EE026-F6CD-4B7C-BAC5-A9AF67732715" />
+            <Instance Id="I114" ProductCode="36C091A1-4E95-42FE-8E4B-232B037B2D94" ProductName="DIS Hangfire Scheduler Application Instance I114" UpgradeCode="34F72604-E58C-485E-93E6-F72AB2C438FE" />
+            <Instance Id="I115" ProductCode="EAA8350C-E2A1-48C7-B34C-BE7CDFD72EB5" ProductName="DIS Hangfire Scheduler Application Instance I114" UpgradeCode="A995D9DD-A4DF-40AB-9719-17C91D0B2229" />
+            <Instance Id="I116" ProductCode="09849CBB-DDAB-4EAE-ADDF-E6BE341A73E2" ProductName="DIS Hangfire Scheduler Application Instance I116" UpgradeCode="87FDCA39-F9BF-4263-AE2E-A749E88543B5" />
+            <Instance Id="I117" ProductCode="A8A44A63-E523-4C87-9097-226163EBA162" ProductName="DIS Hangfire Scheduler Application Instance I117" UpgradeCode="70533B06-2B78-4BD6-A5EC-D5D4B2BCC131" />
+            <Instance Id="I118" ProductCode="8211495D-C769-4BF1-B64A-B65836EC0C65" ProductName="DIS Hangfire Scheduler Application Instance I118" UpgradeCode="DC613EEB-7435-4C94-87BB-399A8E308071" />
+            <Instance Id="I119" ProductCode="F489FC5A-D5AE-46C5-9031-20D223B7E63E" ProductName="DIS Hangfire Scheduler Application Instance I119" UpgradeCode="8D5D165A-65F3-4A24-8217-F2F76116F5BD" />
+            <Instance Id="I120" ProductCode="F4191727-DA65-431B-857E-416EA2551561" ProductName="DIS Hangfire Scheduler Application Instance I120" UpgradeCode="0919782F-5956-4244-AEA0-9C27E4DDFC18" />
+        </InstanceTransforms>
+        <Component Guid="FAAF1897-8F47-48C1-9F1F-C3EFC5B84350" Id="RegistryComponent" MultiInstance="yes" Directory="INSTALLFOLDER">
+            <RegistryKey Id="MainRegKey" Key="SOFTWARE\[Manufacter]\DIS5\DIS HangFire Scheduler Application\[ProductCode]" Root="HKLM" ForceCreateOnInstall="yes" ForceDeleteOnUninstall="yes">
+                <RegistryValue Id="MainRegValue" Name="InstanceID" Type="string" Value="[INSTANCEID]" />
+                <RegistryValue Id="InstallPathValue" Name="Location" Type="string" Value="[INSTALLFOLDER]" />
+                <RegistryValue Id="ProductCodeValue" Name="ProductCode" Type="string" Value="[ProductCode]" />
+                <RegistryValue Id="ProductNameValue" Name="ProductName" Type="string" Value="[ProductName]" />
+                <RegistryValue Id="ProductVersionValue" Name="ProductVersion" Type="string" Value="[ProductVersion]" />
+                <util:PermissionEx User="Everyone" GenericRead="yes" GenericWrite="yes" Read="yes" Write="yes" />
+            </RegistryKey>
+        </Component>
+    </Product>
+    <Fragment>
+        <!-- Will default to C:\ if that is the main disk-->
+        <Directory Id="TARGETDIR" Name="SourceDir">
+            <!-- Will reference to C:\inetpub-->
+            <Directory Id="INETPUB" Name="Inetpub">
+                <!-- Will reference to c:\Inetpub\Demowebsite-->
+                <Directory Id="INSTALLFOLDER" Name="Scheduler">
+                    <Directory Id="ConfigFolder" Name="Config" ComponentGuidGenerationSeed="{603EED91-A121-7F6B-B8D9-7568DCF1D3B4}" />
+                    <Component Guid="FB75B9CC-3568-43BB-9D87-7EAA875625F3" Id="FolderComponent" MultiInstance="yes">
+                        <CreateFolder />
+                    </Component>
+                </Directory>
+            </Directory>
+        </Directory>
+    </Fragment>
+</Wix>

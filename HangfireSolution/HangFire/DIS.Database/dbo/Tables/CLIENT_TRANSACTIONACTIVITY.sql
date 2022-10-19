@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[CLIENT_TRANSACTIONACTIVITY] (
+    [Transaction_ID]  VARCHAR (50)   NOT NULL,
+    [Activity_ID]     INT            IDENTITY (1, 1) NOT NULL,
+    [API_ID]          INT            NOT NULL,
+    [TransactionDate] DATETIME       NOT NULL,
+    [Status]          VARCHAR (50)   NOT NULL,
+    [TransactionData] NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_CLIENT_TRANSACTIONACTIVITY] PRIMARY KEY CLUSTERED ([Activity_ID] ASC),
+    CONSTRAINT [FK_CLIENT_TRANSACTIONACTIVITY_CLIENT_TRANSACTION] FOREIGN KEY ([Transaction_ID]) REFERENCES [dbo].[CLIENT_TRANSACTION] ([Id])
+);
+
+
+
